@@ -1,0 +1,37 @@
+# Highest radius accepted by /townyblock radius and /townyblock remove radius.
+# Radius is measured in chunks. 2 previews a 5x5 square centred on the player.
+max-radius: 48
+
+messages:
+  prefix: "&8[&6TownyBlock&8] &r"
+  # Shown when a town is created or land is claimed on a protected chunk.
+  # /town claim can fill two %s placeholders (blocked plots, then selected plots).
+  # Creating a town shows this text as written, so leave the %s out unless you want them visible there.
+  # A stray % will break the message. Write a percent sign as %%.
+  blocked-claim: "This area is protected and cannot be claimed."
+  added: "&aBlocked chunk &f%world% %x%, %z%&a."
+  already-blocked: "&eChunk &f%world% %x%, %z% &eis already blocked."
+  preview-ready: "&aPreviewing &f%count% &achunks in a radius of &f%radius%&a. Red dust marks every block. Walk around, then &f/townyblock confirm &aor &f/townyblock cancel&a."
+  preview-replaced: "&eCleared the previous preview."
+  confirmed: "&aBlocked &f%count% &achunks. &7%already% were already blocked."
+  already-area: "&eThat area is already blocked."
+  nothing-to-confirm: "&eYou do not have a preview. Use &f/townyblock radius <radius>&e."
+  cancelled: "&aCleared the preview."
+  nothing-to-cancel: "&eYou do not have a preview to clear."
+  removed: "&aUnblocked chunk &f%world% %x%, %z%&a."
+  removed-area: "&aRemoved the protected area in &f%world% &7(%minx%, %minz% to %maxx%, %maxz%, %count% chunks)&a."
+  removed-square: "&aUnblocked &f%areas% &aareas and &f%chunks% &aindividual chunks."
+  not-blocked: "&eChunk &f%world% %x%, %z% &eis not blocked."
+  none-blocked: "&eNothing blocked was removed."
+  invalid-radius: "&cRadius must be a whole number from 0 to %max%."
+  invalid-coords: "&cChunk coordinates must be whole numbers."
+  unknown-world: "&cThere is no world named &f%world%&c."
+  players-only: "&cRun that as a player, or give a world and chunk coordinates."
+  reloaded: "&aReloaded &f%count% &ablocked chunks."
+  reload-failed: "&cCould not reload. Check the console; chunks.yml was left unchanged."
+  list-header: "&6Protected areas &7(%count%) &6page &f%page%&7/&f%pages%&6:"
+  list-area: "&7- &f%world% &7%minx%, %minz% &7to &f%maxx%, %maxz% &7(%count% chunks)"
+  list-line: "&7- &f%world% &7chunk %x%, %z%"
+  list-empty: "&7No chunks are blocked."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&e/townyblock radius <radius>\n&e/townyblock confirm\n&e/townyblock cancel\n&e/townyblock remove\n&e/townyblock remove radius <radius>\n&e/townyblock add &7[x z | world x z]\n&e/townyblock list &7[page]\n&e/townyblock reload"

@@ -1,0 +1,20 @@
+name: TownyBlock
+version: ${project.version}
+main: uk.globeworks.townyblock.TownyBlockPlugin
+api-version: '1.21'
+depend: [Towny]
+authors: [GlobeWorks]
+description: Stops towns from being created or expanded into protected chunks.
+website: https://globeworks.uk
+
+commands:
+  townyblock:
+    description: Protect chunks so towns cannot claim them.
+    aliases: [tb]
+    usage: /townyblock <radius|confirm|cancel|remove|add|list|reload>
+    permission: townyblock.admin
+
+permissions:
+  townyblock.admin:
+    description: Add, remove, and list chunks that towns cannot claim.
+    default: op
